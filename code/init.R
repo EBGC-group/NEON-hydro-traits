@@ -28,10 +28,29 @@ s3 = arrow::s3_bucket(bucket = paste0(s3_specs$bucket,"/",s3_specs$prefix,"/"))
 remote = neon_remote_db(bucket = s3)
 
 # and then reading in a file from the remote connection.
-neon_remote(
-  table = "csd_15_min-basic", 
-  product = "DP4.00130.001",
-  db = remote
+# neon_remote(
+#   table = "csd_15_min-basic", 
+#   product = "DP4.00130.001",
+#   db = remote
+#   )  %>%
+#   dplyr::collect() %>% 
+#   saveRDS(here::here('data/discharge/NEON_Q_15min.rds'))
+
+
+# and then reading in a file from the remote connection.
+for(i in 2:length(streamsites)){
+  site_id = streamsites[i]
+  fileName = here::here(paste0('data/discharge/NEON_Q_',site_id,"_1min.rds"))
+  
+  neon_remote(
+    table = "csd_continuousDischarge", 
+    product = "DP4.00130.001",
+    db = remote
   )  %>%
-  dplyr::collect() %>% 
-  saveRDS(here::here('data/discharge/NEON_Q_15min.rds'))
+    dplyr::filter(siteID %in% site_id) %>% 
+    dplyr::collect() %>% 
+    saveRDS(file = fileName)
+  gc()
+}
+
+
