@@ -136,3 +136,85 @@ BIGC_15min<-site_dfs_list[[2]]
 
 
 saveRDS(ARIK_15min, file = "data/discharge/ARIK_15min_Q_Combo")
+
+setwd("~/NEON-hydro-traits/data/discharge")
+
+neon_15min <- readRDS("NEON_Q_15min.rds") |> 
+  select(siteID, endDateTime, stageContinuous, dischargeContinuous, dischargeFinalQF) |> 
+  rename(endDate = endDateTime, stage = stageContinuous, discharge = dischargeContinuous, dischargeFinal = dischargeFinalQF)
+
+neon_ARIK_15min <- readRDS("NEON_Q_ARIK_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_BIGC_15min <- readRDS("NEON_Q_BIGC_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_BLDE_15min <- readRDS("NEON_Q_BLDE_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_BLUE_15min <- readRDS("NEON_Q_BLUE_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_CARI_15min <- readRDS("NEON_Q_CARI_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_COMO_15min <- readRDS("NEON_Q_COMO_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_CUPE_15min <- readRDS("NEON_Q_CUPE_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_GUIL_15min <- readRDS("NEON_Q_GUIL_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_HOPB_15min <- readRDS("NEON_Q_HOPB_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_KING_15min <- readRDS("NEON_Q_KING_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_LECO_15min <- readRDS("NEON_Q_LECO_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_LEWI_15min <- readRDS("NEON_Q_LEWI_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_MART_15min <- readRDS("NEON_Q_MART_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_MAYF_15min <- readRDS("NEON_Q_MAYF_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_MCDI_15min <- readRDS("NEON_Q_MCDI_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_MCRA_15min <- readRDS("NEON_Q_MCRA_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_OKSR_15min <- readRDS("NEON_Q_OKSR_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_POSE_15min <- readRDS("NEON_Q_POSE_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_PRIN_15min <- readRDS("NEON_Q_PRIN_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_REDB_15min <- readRDS("NEON_Q_REDB_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_SYCA_15min <- readRDS("NEON_Q_SYCA_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_TECR_15min <- readRDS("NEON_Q_TECR_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_WALK_15min <- readRDS("NEON_Q_WALK_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+neon_WLOU_15min <- readRDS("NEON_Q_WLOU_15min.rds") |> 
+  select(siteID, endDate, equivalentStage, maxpostDischarge, dischargeFinalQF) |> 
+  rename(stage = equivalentStage, discharge = maxpostDischarge, dischargeFinal = dischargeFinalQF)
+
+neon_full_15min <- rbind(neon_15min, neon_ARIK_15min, neon_BIGC_15min, neon_BLDE_15min, neon_BLUE_15min, neon_CARI_15min, neon_COMO_15min, neon_CUPE_15min, neon_GUIL_15min, neon_HOPB_15min, neon_KING_15min, neon_LECO_15min, neon_LEWI_15min, neon_MART_15min, neon_MAYF_15min, neon_MCDI_15min, neon_MCRA_15min, neon_OKSR_15min, neon_POSE_15min, neon_PRIN_15min, neon_REDB_15min, neon_SYCA_15min, neon_TECR_15min, neon_WALK_15min, neon_WLOU_15min)
+saveRDS(neon_full_15min, file = "NEON_full_15min.rds")
