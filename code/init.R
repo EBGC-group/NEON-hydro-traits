@@ -38,7 +38,7 @@ remote = neon_remote_db(bucket = s3)
 
 
 # and then reading in a file from the remote connection.
-for(i in 2:length(streamsites)){
+for(i in 1:length(streamsites)){
   site_id = streamsites[i]
   fileName = here::here(paste0('data/discharge/NEON_Q_',site_id,"_1min.rds"))
   
@@ -53,4 +53,18 @@ for(i in 2:length(streamsites)){
   gc()
 }
 
-
+# get the macroinvertebrate data for each site from remote connection
+for(i in 1:length(streamsites)){
+  site_id = streamsites[i]
+  fileName = here::here(paste0('data/inverts/NEON_inverts_',site_id,".rds"))
+    
+  neon_remote(
+    table = "",
+    product = "",
+    db = remote
+  ) %>% 
+    dplyr::filter(siteID %in% site_id) %>% 
+    dplyr::collect() %>% 
+    saveRDS(file = fileName)
+  gc()
+}

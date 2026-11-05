@@ -135,4 +135,4 @@ ARIK_15min<-site_dfs_list[[1]]
 BIGC_15min<-site_dfs_list[[2]]
 
 
-saveRDS(ARIK_15min, file = "data/discharge/ARIK_15min_Q_Combo")
+saveRDS(ARIK_15min, file = "data/discharge/ARIK_15min_Q_Combo.rds")
