@@ -135,6 +135,7 @@ ARIK_15min<-site_dfs_list[[1]]
 BIGC_15min<-site_dfs_list[[2]]
 
 
+<<<<<<< HEAD
 saveRDS(ARIK_15min, file = "data/discharge/ARIK_15min_Q_Combo")
 
 setwd("~/NEON-hydro-traits/data/discharge")
@@ -218,3 +219,6 @@ neon_WLOU_15min <- readRDS("NEON_Q_WLOU_15min.rds") |>
 
 neon_full_15min <- rbind(neon_15min, neon_ARIK_15min, neon_BIGC_15min, neon_BLDE_15min, neon_BLUE_15min, neon_CARI_15min, neon_COMO_15min, neon_CUPE_15min, neon_GUIL_15min, neon_HOPB_15min, neon_KING_15min, neon_LECO_15min, neon_LEWI_15min, neon_MART_15min, neon_MAYF_15min, neon_MCDI_15min, neon_MCRA_15min, neon_OKSR_15min, neon_POSE_15min, neon_PRIN_15min, neon_REDB_15min, neon_SYCA_15min, neon_TECR_15min, neon_WALK_15min, neon_WLOU_15min)
 saveRDS(neon_full_15min, file = "NEON_full_15min.rds")
+=======
+saveRDS(ARIK_15min, file = "data/discharge/ARIK_15min_Q_Combo.rds")
+>>>>>>> 8e8e55b6bc88a78054431fdd0420e674121c1cf7
