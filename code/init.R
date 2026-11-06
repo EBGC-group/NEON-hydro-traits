@@ -53,4 +53,18 @@ for(i in 2:length(streamsites)){
   gc()
 }
 
+<<<<<<< Updated upstream
 
+=======
+# get the macroinvertebrate data from remote connection
+fileName = here::here(paste0('data/inverts/NEON_inverts.rds'))
+    
+  neon_remote(
+    table = "inv_taxonomyProcessed-basic",
+    product = "DP1.20120.001",
+    db = remote
+  ) %>% 
+    dplyr::collect() %>% 
+    saveRDS(file = fileName)
+  gc()
+>>>>>>> Stashed changes
